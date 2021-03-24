@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+// mixin
+@mixin ab_center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 主色系變數
+$main-color01: #92E3A9;
+$main-color01-light: #DEF6E5;
+$main-color01-dark: #4E8063;
+$text-color: #333333;
+$main-color02: #FF511A;
+$main-color03: #797979;
+
+// 共用
+body {
+    font-family: "Maven Pro", "Noto Sans TC",sans-serif;
+}
+
+//
+header {
+    position: relative;
+    &:before {
+        z-index: -1;
+        display: block;
+        content: "";
+        position: absolute;
+        height: 350px;
+        width: 100%;
+        background-color: $main-color01-light;
+        top: 0;
+        left: 0;
+        border-radius: 0 0 100% 100%;
+        
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 4.75rem;
+        span {
+            color: $main-color02;
+        }
+    }
+    a.header-link {
+        text-decoration: none;
+        color: $main-color03;
+        transition: .3s;
+        font-size: 1.45rem;
+        &:hover {
+            color: darken($main-color03, 10%);
+        }
+    }
+    .header-img-group {
+        .circle {
+            width: 100%;
+            height: 100%;
+            background-color: $main-color01;
+            border-radius: 50%;
+        }
+        .col-4 {
+            position: relative;
+            &.dialog-text::after {
+                display: block;
+                background-color: $main-color01-dark;
+                position: absolute;
+                white-space: nowrap;
+                color: #fff;
+                padding: .25rem 1.75rem;
+                font-size: 1.5rem;
+            }
+            &.dialog-01::after {
+                content: "採收工作";
+                left: 40%;
+                top: -15px;
+                border-radius: 100px 100px 100px 0;
+            }
+            &.dialog-02::after {
+                content: "作物梳果";
+                left: 40%;
+                bottom: -15px;
+                z-index: 2;
+                border-radius: 0 100px 100px 100px;
+            }
+            &.dialog-03::after {
+                content: "採收工作";
+                left: 40%;
+                bottom: -15px;
+                z-index: 2;
+                border-radius: 0 100px 100px 100px;
+            }
+            &.dialog-04::after {
+                content: "採收工作";
+                left: 40%;
+                bottom: -15px;
+                z-index: 2;
+                border-radius: 0 100px 100px 100px;
+            }
+            &.dialog-05::after {
+                content: "作物理蔓";
+                left: 40%;
+                bottom: -15px;
+                z-index: 2;
+                border-radius: 0 100px 100px 100px;
+            }
+            &.iron-farmer {
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 120%;
+                    height: 120%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: -10%;
+                    left: -10%;
+                    z-index: 2;
+                    background-image: url(../images/iron-farmer.jpg);
+                    background-size: cover;
+                    border-radius: 50%;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                }
+            }
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+}

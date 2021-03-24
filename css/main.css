@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap");
+body {
+  font-family: "Maven Pro", "Noto Sans TC",sans-serif;
+}
+
+header {
+  position: relative;
+}
+
+header:before {
+  z-index: -1;
+  display: block;
+  content: "";
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  background-color: #DEF6E5;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 100% 100%;
+}
+
+header h3 {
+  font-size: 2rem;
+}
+
+header h1 {
+  font-size: 4.75rem;
+}
+
+header h1 span {
+  color: #FF511A;
+}
+
+header a.header-link {
+  text-decoration: none;
+  color: #797979;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 1.45rem;
+}
+
+header a.header-link:hover {
+  color: #606060;
+}
+
+header .header-img-group .circle {
+  width: 100%;
+  height: 100%;
+  background-color: #92E3A9;
+  border-radius: 50%;
+}
+
+header .header-img-group .col-4 {
+  position: relative;
+}
+
+header .header-img-group .col-4.dialog-text::after {
+  display: block;
+  background-color: #4E8063;
+  position: absolute;
+  white-space: nowrap;
+  color: #fff;
+  padding: .25rem 1.75rem;
+  font-size: 1.5rem;
+}
+
+header .header-img-group .col-4.dialog-01::after {
+  content: "採收工作";
+  left: 40%;
+  top: -15px;
+  border-radius: 100px 100px 100px 0;
+}
+
+header .header-img-group .col-4.dialog-02::after {
+  content: "作物梳果";
+  left: 40%;
+  bottom: -15px;
+  z-index: 2;
+  border-radius: 0 100px 100px 100px;
+}
+
+header .header-img-group .col-4.dialog-03::after {
+  content: "採收工作";
+  left: 40%;
+  bottom: -15px;
+  z-index: 2;
+  border-radius: 0 100px 100px 100px;
+}
+
+header .header-img-group .col-4.dialog-04::after {
+  content: "採收工作";
+  left: 40%;
+  bottom: -15px;
+  z-index: 2;
+  border-radius: 0 100px 100px 100px;
+}
+
+header .header-img-group .col-4.dialog-05::after {
+  content: "作物理蔓";
+  left: 40%;
+  bottom: -15px;
+  z-index: 2;
+  border-radius: 0 100px 100px 100px;
+}
+
+header .header-img-group .col-4.iron-farmer:after {
+  display: block;
+  content: "";
+  width: 120%;
+  height: 120%;
+  background-color: #fff;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  z-index: 2;
+  background-image: url(../images/iron-farmer.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+header .header-img-group img {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
