@@ -134,6 +134,8 @@ header {
     h3 {
         font-size: 2rem;
         position: relative;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
         &:before, &:after {
             display: inline-block;
             content: "";
@@ -142,5 +144,10 @@ header {
             background-color: $main-color01-dark;
             margin:.25rem 1rem;
         }
+    }
+    .spec-card {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+        border-radius: 16px;
     }
 }

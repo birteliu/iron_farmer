@@ -129,6 +129,8 @@ header .header-img-group img {
 .specification h3 {
   font-size: 2rem;
   position: relative;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .specification h3:before, .specification h3:after {
@@ -138,5 +140,12 @@ header .header-img-group img {
   height: 10px;
   background-color: #4E8063;
   margin: .25rem 1rem;
+}
+
+.specification .spec-card {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem;
+  border-radius: 16px;
 }
 /*# sourceMappingURL=main.css.map */
