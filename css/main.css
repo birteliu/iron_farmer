@@ -125,4 +125,18 @@ header .header-img-group .col-4.iron-farmer:after {
 header .header-img-group img {
   border-radius: 50%;
 }
+
+.specification h3 {
+  font-size: 2rem;
+  position: relative;
+}
+
+.specification h3:before, .specification h3:after {
+  display: inline-block;
+  content: "";
+  width: 100px;
+  height: 10px;
+  background-color: #4E8063;
+  margin: .25rem 1rem;
+}
 /*# sourceMappingURL=main.css.map */

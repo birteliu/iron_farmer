@@ -130,3 +130,17 @@ header {
         }
     }
 }
+.specification {
+    h3 {
+        font-size: 2rem;
+        position: relative;
+        &:before, &:after {
+            display: inline-block;
+            content: "";
+            width: 100px;
+            height: 10px;
+            background-color: $main-color01-dark;
+            margin:.25rem 1rem;
+        }
+    }
+}
