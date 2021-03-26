@@ -148,4 +148,54 @@ header .header-img-group img {
   padding: 1rem;
   border-radius: 16px;
 }
+
+.specification .spec-card img {
+  width: 100px;
+}
+
+.feature h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.feature ul li {
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.feature ul li:before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #92E3A9;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+}
+
+footer:after {
+  z-index: -2;
+  display: block;
+  content: "";
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  background-color: #4E8063;
+  bottom: -200px;
+  left: 0;
+  border-radius: 100% 100% 0 0;
+}
+
+footer .contact {
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 3rem;
+}
 /*# sourceMappingURL=main.css.map */
