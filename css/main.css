@@ -132,12 +132,24 @@ header .header-img-group .col-4.dialog-01::after {
   z-index: 2;
 }
 
+@media (max-width: 576px) {
+  header .header-img-group .col-4.dialog-01::after {
+    top: -25px;
+  }
+}
+
 header .header-img-group .col-4.dialog-02::after {
   content: "作物梳果";
   left: 40%;
   bottom: -15px;
   z-index: 2;
   border-radius: 0 100px 100px 100px;
+}
+
+@media (max-width: 576px) {
+  header .header-img-group .col-4.dialog-02::after {
+    left: 20%;
+  }
 }
 
 header .header-img-group .col-4.dialog-03::after {
@@ -156,12 +168,26 @@ header .header-img-group .col-4.dialog-04::after {
   border-radius: 0 100px 100px 100px;
 }
 
+@media (max-width: 576px) {
+  header .header-img-group .col-4.dialog-04::after {
+    left: 30%;
+    bottom: -20px;
+  }
+}
+
 header .header-img-group .col-4.dialog-05::after {
   content: "作物理蔓";
   left: 40%;
   bottom: -15px;
   z-index: 2;
   border-radius: 0 100px 100px 100px;
+}
+
+@media (max-width: 576px) {
+  header .header-img-group .col-4.dialog-05::after {
+    left: 20%;
+    bottom: -20px;
+  }
 }
 
 header .header-img-group .col-4.iron-farmer:after {

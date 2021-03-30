@@ -119,6 +119,9 @@ header {
                 top: -15px;
                 border-radius: 100px 100px 100px 0;
                 z-index: 2;
+                @media (max-width: 576px) { 
+                    top: -25px;
+                }
             }
             &.dialog-02::after {
                 content: "作物梳果";
@@ -126,6 +129,9 @@ header {
                 bottom: -15px;
                 z-index: 2;
                 border-radius: 0 100px 100px 100px;
+                @media (max-width: 576px) { 
+                    left: 20%;
+                }
             }
             &.dialog-03::after {
                 content: "採收工作";
@@ -140,6 +146,10 @@ header {
                 bottom: -15px;
                 z-index: 2;
                 border-radius: 0 100px 100px 100px;
+                @media (max-width: 576px) { 
+                    left: 30%;
+                    bottom: -20px;
+                }
             }
             &.dialog-05::after {
                 content: "作物理蔓";
@@ -147,6 +157,10 @@ header {
                 bottom: -15px;
                 z-index: 2;
                 border-radius: 0 100px 100px 100px;
+                @media (max-width: 576px) { 
+                    left: 20%;
+                    bottom: -20px;
+                }
             }
             &.iron-farmer {
                 &:after {
