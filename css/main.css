@@ -4,6 +4,19 @@ body {
   font-family: "Maven Pro", "Noto Sans TC",sans-serif;
 }
 
+.bg {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.4;
+  background-size: 6px 6px;
+  background-image: repeating-linear-gradient(45deg, #b2ffab 0, #b2ffab 0.6px, #ffffff 0, #ffffff 50%);
+}
+
 header {
   position: relative;
 }
@@ -29,6 +42,12 @@ header h1 {
   font-size: 4.75rem;
 }
 
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 4rem;
+  }
+}
+
 header h1 span {
   color: #FF511A;
 }
@@ -39,10 +58,40 @@ header a.header-link {
   -webkit-transition: .3s;
   transition: .3s;
   font-size: 1.45rem;
+  transition: .3s;
+}
+
+@media (max-width: 992px) {
+  header a.header-link {
+    font-size: 1.25rem;
+  }
 }
 
 header a.header-link:hover {
-  color: #606060;
+  color: #1c9c6c;
+  font-weight: bold;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header a.header-link:hover:after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #1c9c6c;
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  header .header-img-group {
+    margin-top: 2.5rem;
+  }
 }
 
 header .header-img-group .circle {
@@ -58,12 +107,21 @@ header .header-img-group .col-4 {
 
 header .header-img-group .col-4.dialog-text::after {
   display: block;
-  background-color: #4E8063;
+  background-color: #1c9c6c;
   position: absolute;
   white-space: nowrap;
   color: #fff;
   padding: .25rem 1.75rem;
   font-size: 1.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+@media (max-width: 992px) {
+  header .header-img-group .col-4.dialog-text::after {
+    font-size: 1.15rem;
+    padding: .25rem 1.25rem;
+  }
 }
 
 header .header-img-group .col-4.dialog-01::after {
@@ -71,6 +129,7 @@ header .header-img-group .col-4.dialog-01::after {
   left: 40%;
   top: -15px;
   border-radius: 100px 100px 100px 0;
+  z-index: 2;
 }
 
 header .header-img-group .col-4.dialog-02::after {
@@ -126,6 +185,10 @@ header .header-img-group img {
   border-radius: 50%;
 }
 
+.specification {
+  margin-bottom: 5rem;
+}
+
 .specification h3 {
   font-size: 2rem;
   position: relative;
@@ -138,7 +201,7 @@ header .header-img-group img {
   content: "";
   width: 100px;
   height: 10px;
-  background-color: #4E8063;
+  background-color: #1c9c6c;
   margin: .25rem 1rem;
 }
 
@@ -149,19 +212,31 @@ header .header-img-group img {
   border-radius: 16px;
 }
 
+.specification .spec-card h6 {
+  font-size: 1.2rem;
+}
+
 .specification .spec-card img {
   width: 100px;
 }
 
 .feature h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 1rem;
+  line-height: 1.5;
 }
 
 .feature ul li {
   font-size: 1.2rem;
   padding: 1rem;
   margin-left: 1rem;
+}
+
+@media (max-width: 992px) {
+  .feature ul li {
+    margin-left: 0;
+    font-size: 1.1rem;
+  }
 }
 
 .feature ul li:before {
@@ -186,7 +261,7 @@ footer:after {
   position: absolute;
   height: 350px;
   width: 100%;
-  background-color: #4E8063;
+  background-color: #1c9c6c;
   bottom: -200px;
   left: 0;
   border-radius: 100% 100% 0 0;
@@ -197,5 +272,23 @@ footer .contact {
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 3rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+footer .contact img {
+  padding: 0 1.75rem 0 1rem;
+  border-right: 1px solid #92E3A9;
+}
+
+@media (max-width: 768px) {
+  footer .contact img {
+    padding: 0 8rem;
+    border-right: 0;
+  }
+}
+
+footer .contact p {
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=main.css.map */

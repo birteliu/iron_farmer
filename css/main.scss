@@ -11,7 +11,7 @@
 // 主色系變數
 $main-color01: #92E3A9;
 $main-color01-light: #DEF6E5;
-$main-color01-dark: #4E8063;
+$main-color01-dark: #1c9c6c;
 $text-color: #333333;
 $main-color02: #FF511A;
 $main-color03: #797979;
@@ -22,6 +22,18 @@ body {
 }
 
 //
+.bg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.4;
+    background-size: 6px 6px;
+    background-image: repeating-linear-gradient(45deg, #b2ffab 0, #b2ffab 0.6000000000000001px, #ffffff 0, #ffffff 50%);
+}
 header {
     position: relative;
     &:before {
@@ -41,6 +53,9 @@ header {
     }
     h1 {
         font-size: 4.75rem;
+        @media (max-width: 992px) { 
+            font-size: 4rem;
+        }
         span {
             color: $main-color02;
         }
@@ -50,11 +65,32 @@ header {
         color: $main-color03;
         transition: .3s;
         font-size: 1.45rem;
+        transition: .3s;
+        @media (max-width: 992px) { 
+            font-size: 1.25rem;
+        }
         &:hover {
-            color: darken($main-color03, 10%);
+            color: $main-color01-dark;
+            font-weight: bold;
+            position: relative;
+            transition: .3s;
+            &:after {
+                display: block;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: $main-color01-dark;
+                position: absolute;
+                left: 50%;
+                bottom: -12px;
+                transform: translateX(-50%);
+            }
         }
     }
     .header-img-group {
+        @media (max-width: 768px) { 
+            margin-top: 2.5rem;
+        }
         .circle {
             width: 100%;
             height: 100%;
@@ -71,12 +107,18 @@ header {
                 color: #fff;
                 padding: .25rem 1.75rem;
                 font-size: 1.5rem;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                @media (max-width: 992px) { 
+                    font-size: 1.15rem;
+                    padding: .25rem 1.25rem;
+                }
             }
             &.dialog-01::after {
                 content: "採收工作";
                 left: 40%;
                 top: -15px;
                 border-radius: 100px 100px 100px 0;
+                z-index: 2;
             }
             &.dialog-02::after {
                 content: "作物梳果";
@@ -130,6 +172,7 @@ header {
     }
 }
 .specification {
+    margin-bottom: 5rem;
     h3 {
         font-size: 2rem;
         position: relative;
@@ -148,6 +191,9 @@ header {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         padding: 1rem;
         border-radius: 16px;
+        h6 {
+            font-size: 1.2rem;
+        }
         img {
             width: 100px;
         }
@@ -155,14 +201,19 @@ header {
 }
 .feature {
     h3 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-top: 1rem;
+        line-height: 1.5;
     }
     ul {
         li {
             font-size: 1.2rem;
             padding: 1rem;
             margin-left: 1rem;
+            @media (max-width: 992px) { 
+                margin-left: 0;
+                font-size: 1.1rem;
+            }
             &:before {
                 content: "";
                 display: inline-block;
@@ -196,5 +247,17 @@ footer {
         border-radius: 20px;
         background-color: #fff;
         margin-bottom: 3rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        img {
+            padding: 0 1.75rem 0 1rem;
+            border-right: 1px solid $main-color01;
+            @media (max-width: 768px) { 
+                padding: 0 8rem;
+                border-right: 0;
+            }
+        }
+        p {
+            font-size: 1.2rem;
+        }
     }
 }
