@@ -261,15 +261,12 @@ footer {
             padding: 0 1.75rem 0 1rem;
             border-right: 1px solid $main-color01;
             @media (max-width: 768px) { 
-                padding: 0 8rem;
+                padding: 0 3rem;
                 border-right: 0;
             }
         }
         p {
             font-size: 1.2rem;
-            @media (max-width: 576px) { 
-                font-size: 1rem;
-            }
         }
     }
 }

@@ -298,18 +298,12 @@ footer .contact img {
 
 @media (max-width: 768px) {
   footer .contact img {
-    padding: 0 8rem;
+    padding: 0 3rem;
     border-right: 0;
   }
 }
 
 footer .contact p {
   font-size: 1.2rem;
-}
-
-@media (max-width: 576px) {
-  footer .contact p {
-    font-size: 1rem;
-  }
 }
 /*# sourceMappingURL=main.css.map */
