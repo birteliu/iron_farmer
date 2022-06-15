@@ -34,21 +34,26 @@ header:before {
   border-radius: 0 0 100% 100%;
 }
 
-header h3 {
+header h1 {
   font-size: 2rem;
+  font-weight: bold;
 }
 
-header h1 {
+header h3 {
+  font-size: 1.5rem;
+}
+
+header h2 {
   font-size: 4.75rem;
 }
 
 @media (max-width: 992px) {
-  header h1 {
+  header h2 {
     font-size: 4rem;
   }
 }
 
-header h1 span {
+header h2 span {
   color: #FF511A;
 }
 
